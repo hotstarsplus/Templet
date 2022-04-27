@@ -1,0 +1,162 @@
+@import '~antd/dist/antd.css';
+
+/**走马灯父亲盒子*/
+.fatherbody {
+  position: relativae;
+}
+
+/**走马灯切换-----start*/
+.prev {
+  display: block;
+  position: absolute;
+  left: 25px;
+  top: 450px;
+  z-index: 2;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.651);
+  transition: all .4s linear;  
+}
+
+/* .ddiv{
+  width: 100px;
+  height: 100px;
+  border:1px solid;
+
+  margin:0px auto;
+  margin-top: 200px;
+
+
+  transition: all 1s linear;
+}
+.ddiv:hover{
+  transform: scale(2);
+  transition: all 1s linear;
+} */
+
+.prev :hover {
+  transition: all .4s linear;  
+  color: rgba(83, 127, 250, 0.87);
+}
+.next :hover {
+  transition: all .4s linear;  
+  color: rgba(83, 127, 250, 0.87);
+}
+
+.next {
+  position: absolute;
+  right: 25px;
+  top: 450px;
+  z-index: 2;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.651);
+  transition: all .4s linear;  
+}
+
+/**走马灯切换-----end*/
+
+/** 走马灯图*/
+.contentStyle {
+  height: 1000px;
+  overflow: hidden;
+  top: 200px;
+}
+
+/**回到顶部样式*/
+.upStyle {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 30%;
+  background-color: #1088e9;
+  color: #fff;
+  text-align: center;
+  font-size: 14;
+}
+
+/**div动画移动静态------start*/
+.moveStaticDiv {
+  height: 400px;
+  width: 1000px;
+  margin: 0 auto;
+  z-index: 2;
+  text-align: center;
+  line-height: 150px;
+}
+
+.blogStaticDiv{
+  height: 100px;
+  width: 500px;
+  text-align: center;
+  position: relative;
+  top: 200px;
+  opacity: 0;
+  background-color: white;
+}
+
+/**div动画移动------start*/
+.moveupdiv {
+  animation-name: move;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.moveupblogdiv {
+  animation-name: moveblog;
+  animation-delay: 0s;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+.movedowndiv {
+  animation-name: movedown;
+  /*制定需要使用的动画（ 必须的 ）*/
+  animation-delay: 0s;
+  animation-duration: 1s;
+  /* 规定动画完成一个周期所花费的秒或毫秒( 必须的 ) */
+  animation-fill-mode: forwards;
+  /*规定动画结束后状态，保持 forwards 回到起始 backwards*/
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+    background-color: white;
+  }
+
+  100% {
+    transform: translate(0, -80px);
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+@keyframes moveblog {
+  0% {
+    transform: translate(0, 500px);
+    background-color: white;
+    opacity: 0;
+    display: none;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+    display: block;
+  }
+}
+
+@keyframes movedown {
+  0% {
+    transform: translate(0, -80px);
+    background-color: rgb(255, 255, 255);
+  }
+
+  100% {
+    transform: translate(0, 0);
+    background-color: white;
+  }
+}
+
+/**div动画移动------end*/
+

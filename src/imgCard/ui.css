@@ -1,0 +1,45 @@
+@import '~antd/dist/antd.css';
+
+.imgcardfather{
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.imgDiv{
+    width: 400px;
+    height: 550px;
+    overflow: hidden; /*剪去溢出div大小部分的内容 */
+}
+
+/* 将图片设置相对定位，移动图片位置，或者将图片设置为div的背景图，利用background-position属性移动图片位置来显示图片的指定区域 */
+
+.imgdes{
+    padding-top: 200px;
+    color: #848484;
+    font-size: 17px;
+    white-space:pre;
+}
+
+.imgcardfather1{
+    width: 1000px;
+    display: flex;
+    flex-direction:row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.imgDiv1{
+    width: 450px;
+    height: 550px;
+    overflow: hidden; /*剪去溢出div大小部分的内容 */
+}
+
+/* 将图片设置相对定位，移动图片位置，或者将图片设置为div的背景图，利用background-position属性移动图片位置来显示图片的指定区域 */
+
+.imgdes1{
+    padding-top: 200px;
+    color: #848484;
+    font-size: 17px;
+    white-space:pre;
+}

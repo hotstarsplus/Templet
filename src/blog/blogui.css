@@ -1,0 +1,119 @@
+/** 文字绘制 */
+.text--line {
+    font-size: .5em;
+}
+
+.fontwriteviewsvg {
+    width: 30%;
+}
+
+.g-ants {
+    border: 1px solid black;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 7% 28%;
+    stroke-width: 2px;
+    -webkit-animation: stroke-offset 7s 3 linear;
+    animation: stroke-offset 7s 3 linear;
+}
+
+.text-copy:nth-child(1) {
+    stroke: #360745;
+    stroke-dashoffset: 7%;
+}
+
+.text-copy:nth-child(2) {
+    stroke: #D61C59;
+    stroke-dashoffset: 14%;
+}
+
+.text-copy:nth-child(3) {
+    stroke: #E7D84B;
+    stroke-dashoffset: 21%;
+}
+
+.text-copy:nth-child(4) {
+    stroke: #EFEAC5;
+    stroke-dashoffset: 28%;
+}
+
+.text-copy:nth-child(5) {
+    stroke: #1B8798;
+    stroke-dashoffset: 35%;
+}
+
+@-webkit-keyframes stroke-offset {
+    50% {
+        stroke-dashoffset: 35%;
+        stroke-dasharray: 0 87.5%;
+    }
+}
+
+@keyframes stroke-offset {
+    50% {
+        stroke-dashoffset: 35%;
+        stroke-dasharray: 0 87.5%;
+    }
+}
+
+/** 绘制结束 */
+
+.fontwriteview {
+    background-size: .12em 100%;
+    font: 16em/1 Arial;
+    position: relative;
+    left: 34.9%;
+}
+
+/** 新 */
+.g-container {
+    margin: 20px auto;
+    width: 400px;
+}
+
+.g-item {
+    width: 190px;
+    height: 190px;
+    box-sizing: border-box;
+    border: 1px solid #666;
+    border-radius: 10px;
+    line-height: 190px;
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s all;
+}
+
+.g-flex {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.g-flex .g-item:first-child {
+    height: 390px;
+}
+
+.g-flex:hover {
+    flex-direction: row;
+}
+
+.g-flex:hover .g-item:first-child {
+    height: 190px;
+    width: 390px;
+}
+
+.g-box {
+    width: 400px;
+    height: 400px;
+    background: rgb(156, 126, 126);
+    margin: auto;
+}
